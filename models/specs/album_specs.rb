@@ -15,4 +15,6 @@ class TestAlbum < MiniTest::Test
 
   def test_album()
 
+  end
+
 end
