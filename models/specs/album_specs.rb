@@ -9,16 +9,17 @@ class TestAlbum < MiniTest::Test
 
 
   def setup()
-    @artist = Artist.new("Logic")
-    @album = Album.new("Flexicution")
+    hash = {"id" => 1, "name" => "Flexicution", "quantity" => "8", "artist_id" => "2"}
+    @album = Album.new(hash)
   end
 
 def test_album_name()
   assert_equal("Flexicution", @album.name)
 end
 
-
-  def
+def test_album_quantity()
+  assert_equal("8", @album.quantity)
+end
 
 
 

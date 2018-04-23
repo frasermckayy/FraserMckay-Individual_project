@@ -3,7 +3,7 @@ require_relative('../db/sql_runner')
 class Album
 
 #getters
-  attr_reader( :name, :quantity, :artist_id, :id)
+  attr_reader :name, :quantity, :artist_id, :id
 
 #initialize
   def initialize(options)
