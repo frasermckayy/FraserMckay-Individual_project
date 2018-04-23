@@ -13,8 +13,6 @@ class TestAlbum < MiniTest::Test
     @album = Album.new("Flexicution")
   end
 
-  def test_album()
 
-  end
 
 end
