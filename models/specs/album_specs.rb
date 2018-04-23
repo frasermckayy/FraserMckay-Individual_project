@@ -1,11 +1,18 @@
 require( 'minitest/autorun')
-require_relative ()
+require('minitest/rg')
+
+require_relative('../artist.rb')
+require_relative('../album.rb')
 
 
 class TestAlbum < MiniTest::Test
 
 
-  def setup
+  def setup()
+    @artist = Artist.new("Logic")
+    @album = Album.new("Flexicution")
   end
+
+  def test_album()
 
 end
