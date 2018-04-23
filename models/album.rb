@@ -61,7 +61,7 @@ class Album
 
 #show quantity of stock
   def stock_level()
-    return "#{@quantity}"
+    return @quantity
   end
 
 

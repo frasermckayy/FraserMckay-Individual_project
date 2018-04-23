@@ -13,6 +13,8 @@ class TestAlbum < MiniTest::Test
     @album = Album.new("Flexicution")
   end
 
-
+def test_album_name()
+  assert_equal("Flexicution", @album.name)
+end
 
 end
