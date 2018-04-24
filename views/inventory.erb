@@ -1,9 +1,15 @@
+<h1>Inventory</h1>
 
-
-<a href="/">Home</a>
-
-<h1>Record Store Inventory</h1>
-
-<p> Inventory <%= @inventory %></p>
-<p> Albums: <%= @albums %></p>
-<p> Artists: <%= @artists %></p>
+<table>
+  <tr>
+    <th>Inventory of albums and artists</th>
+  </tr>
+  <% for album in @albums %>
+  <tr>
+    <td>Artist: <a href="/artists/<%= album.artist_id %>"> <%= album.artist[0].name%></a> Album: <a href="/albums/<%= album.id %>"><%= album.name %><a/></td>
+  </tr>
+  <tr>
+    <td>Quantity: <%= album.stock_level %></td>
+  </tr>
+  <% end %>
+</table>

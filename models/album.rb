@@ -58,11 +58,27 @@ class Album
     return Album.new(results.first)
   end
 
+  def artist()
+    sql = "SELECT * FROM artists
+    WHERE id = $1"
+    values = [@artist_id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |artist| Artist.new(artist)}
+    #find artist for this album and create a new artist object
+    #map .first
+  end
+
 
 #show quantity of stock
   def stock_level()
-    return @quantity
+  if @quantity >= 10
+    return "high"
+  elsif @quantity >= 5 && @quantity <= 9
+    return "medium"
+  elsif @quantity <= 4
+    return "low"
   end
+end
 
 
 

@@ -1,19 +1,9 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all')
-require_relative('./controllers/controller.rb')
+require_relative('./controllers/albums_controller.rb')
+require_relative('./controllers/artists_controller.rb')
 
 
 get '/' do
   erb(:index)
 end
-
-get '/inventory' do
-  @artists = Artist.name()
-  @albums = Album.name()
-  erb(:inventory)
-end
-
-# get '/stock_level' do
-#   @quantity = Quantity.all()
-#   erb(:stock_level)
-# end

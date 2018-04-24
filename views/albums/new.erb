@@ -1,0 +1,29 @@
+<h1>Create Album</h1>
+
+
+<form  action="/albums" method="post">
+
+  <label for="name">Album Name</label>
+  <input type="text" name="name" >
+  <label for="quantity"> Quantity</label>
+  <input type="number" name="quantity" >
+
+  <select name="artist_id" id="name">
+    <% @artists.each do |artist| %>
+    <option value=<%=artist.id%>> <%=artist.name %> </option>
+    <% end %>
+  </select>
+
+  <input type="submit" value="Add Album">
+
+</form>
+
+<form  action="/albums/delete" method="post">
+  <label for="name">Which album do you want to delete?</label>
+  <select name="name" id="name">
+    <option value="Flexicution">Flexicution</option>
+    <option value="When it's dark out">When it's dark out</option>
+    <option value="Curtain call">Curtain Call</option>
+  </select>
+  <input type="submit"  value="Delete Album">
+</form>
