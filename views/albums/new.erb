@@ -18,12 +18,10 @@
 
 </form>
 
-<form  action="/albums/delete" method="post">
-  <label for="name">Which album do you want to delete?</label>
-  <select name="name" id="name">
-    <option value="Flexicution">Flexicution</option>
-    <option value="When it's dark out">When it's dark out</option>
-    <option value="Curtain call">Curtain Call</option>
-  </select>
-  <input type="submit"  value="Delete Album">
-</form>
+<label for="name">Which album do you want to delete?</label>
+  <% @albums.each do |album| %>
+  <form  action="/albums/<%= album.id %>/delete" method="post">
+    <li> <%=album.name %> </li>
+    <input type="submit"  value="Delete Album">
+    <% end %>
+  </form>
