@@ -35,7 +35,7 @@ end
 
 get '/albums/:id' do
   @album = Album.find(params['id'].to_i)
-  erb(:"albums/index")
+  erb(:"albums/show")
 end
 
 get'/albums/:name' do

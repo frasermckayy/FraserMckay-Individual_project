@@ -1,0 +1,21 @@
+body {
+
+background-size: 100%;
+background-repeat: no-repeat;
+color: black;
+}
+
+nav {
+  background-color: lightgray;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  padding-right: 25px;
+
+  }
+
+
+#content {
+
+  text-align: center;
+}

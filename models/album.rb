@@ -62,8 +62,9 @@ class Album
     sql = "SELECT * FROM artists
     WHERE id = $1"
     values = [@artist_id]
-    results = SqlRunner.run(sql, values)
-    return results.map { |artist| Artist.new(artist)}
+    hash = SqlRunner.run(sql, values)
+    result = hash.map { |artist| Artist.new(artist)}
+    return result.first
     #find artist for this album and create a new artist object
     #map .first
   end
